@@ -1,41 +1,42 @@
-Cluedo (Clue) Game Implementation - Part 1
+# Cluedo Game Project - Part 1
 
-Instructions to Run the Game:
+This project is a Python implementation of the classic board game Cluedo, developed as part of Project 2. This version features a command-line interface (CLI) for gameplay.
 
-1. Prerequisites:
-   - Python 3.6 or higher installed on your system
-   - No additional packages required (uses only standard library)
+## How to Run the Game
 
-2. Running the Game:
-   - Navigate to the project directory in your terminal/command prompt
-   - Run the command: python main.py
+### Prerequisites
+- Python 3.8 or higher is recommended.
+- No external libraries are required to run this project. The code uses only standard Python libraries.
 
-3. Game Instructions:
-   - The game supports 3-6 players (automatically assigned characters)
-   - On your turn, you'll roll a die and move your character
-   - Movement is done by entering direction and steps (e.g., "UP 2")
-   - When you enter a room, you must make a suggestion
-   - Suggestions involve choosing a character and weapon to suggest
-   - Other players will refute if they have cards that match
-   - You can make an accusation at any time, but be careful - wrong accusations eliminate you!
+### Steps to Run
 
-4. Game Rules:
-   - Standard Cluedo rules apply
-   - Secret passages connect: Study-Kitchen and Conservatory-Lounge
-   - Players must roll to exit rooms
-   - Suggested characters are moved to the suggestion room
-   - Correct accusation wins the game
+1.  **Clone the Repository (if applicable):**
+    If you are using Git, clone the repository to your local machine.
+    ```bash
+    git clone <your-repo-url>
+    ```
 
-5. Project Structure:
-   - cluedo_game/ contains all game logic modules
-   - board.py: Mansion layout and game components
-   - cards.py: Card and deck implementation
-   - player.py: Player class and logic
-   - game.py: Main game logic and turn management
-   - utils.py: Helper functions
-   - main.py: Entry point and user interface
+2.  **Navigate to the Source Code Directory:**
+    Open a terminal or command prompt and navigate to the root folder of the project.
+    ```bash
+    cd path/to/Studentname_Project2_SourceCode/
+    ```
 
-6. Notes:
-   - This is a text-based implementation (Part 1 requirements)
-   - Error handling is basic in this version (will be expanded in Part 2)
-   - The game follows standard Cluedo rules with some simplifications for the CLI interface
+3.  **Run the Game:**
+    Execute the `main.py` script using Python.
+    ```bash
+    python main.py
+    ```
+
+4.  **Play the Game:**
+    Follow the on-screen prompts in your terminal. You will be asked to:
+    - Choose the number of players.
+    - Press Enter to roll the dice on your turn.
+    - Choose your move from a list of valid options.
+    - Make suggestions (character and weapon) when you enter a room.
+
+### Running Tests
+To run the included unit tests, navigate to the project's root directory and run the test file:
+```bash
+python -m unittest tests/test_cluedo.py
+
