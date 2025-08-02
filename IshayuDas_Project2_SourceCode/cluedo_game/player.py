@@ -1,26 +1,23 @@
-from .board import Character
+# cluedo_game/player.py
 
 class Player:
-    def __init__(self, character, cards):
-        self.character = character
-        self.cards = cards
-        self.position = None
-        self.current_room = None
-    
-    def set_position(self, position):
-        self.position = position
-    
-    def set_current_room(self, room):
-        self.current_room = room
-    
-    def can_refute(self, suggestion):
-        """Check if player can refute a suggestion with their cards"""
-        for card in self.cards:
-            if (card.type == "Character" and card.value == suggestion["character"]) or \
-               (card.type == "Weapon" and card.value == suggestion["weapon"]) or \
-               (card.type == "Room" and card.value == suggestion["room"]):
-                return card
-        return None
-    
-    def __str__(self):
-        return f"{self.character.value} (Cards: {len(self.cards)})"
+    """Represents a player in the game."""
+    def __init__(self, player_name, character_enum):
+        self.name = player_name
+        self.character = character_enum
+        self.hand = []
+
+    def add_card_to_hand(self, card):
+        """Adds a card to the player's hand."""
+        self.hand.append(card)
+
+    def display_hand(self):
+        """Prints the player's cards to the console."""
+        print(f"\n{self.name}'s Hand ({self.character.value}):")
+        if not self.hand:
+            print("  No cards.")
+            return
+        
+        sorted_hand = sorted(self.hand, key=lambda card: card.__class__.__name__)
+        for card in sorted_hand:
+            print(f"  - {card.value}")
