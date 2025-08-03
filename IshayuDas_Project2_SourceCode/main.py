@@ -1,12 +1,10 @@
-# main.py
-
 from cluedo_game.game import Game
 
 def main():
     """
-    Initializes and runs the Cluedo game, allowing for a mix of human and AI players.
+    Initializes and runs the Cluedo game, for human and AI players.
     """
-    print("--- 🎲 Welcome to Cluedo! 🕵️ ---")
+    print("--- Welcome to Cluedo! ---")
     
     while True:
         try:

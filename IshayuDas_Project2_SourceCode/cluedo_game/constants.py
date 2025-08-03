@@ -1,5 +1,3 @@
-# cluedo_game/constants.py
-
 from enum import Enum
 
 class Character(Enum):

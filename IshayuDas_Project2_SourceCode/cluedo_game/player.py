@@ -1,5 +1,3 @@
-# cluedo_game/player.py
-
 class Player:
     """Represents a human player in the game."""
     def __init__(self, player_name, character_enum):

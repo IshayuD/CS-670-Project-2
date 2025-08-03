@@ -1,5 +1,3 @@
-# cluedo_game/game.py
-
 import random
 import time
 from . import constants
@@ -8,7 +6,7 @@ from .player import Player
 from .ai_player import AIPlayer
 
 class Game:
-    """Orchestrates the entire Cluedo game with human and AI players."""
+    """Initializes the entire Cluedo game with AI players."""
     def __init__(self, total_players, num_ai):
         self.num_players = total_players
         self.num_ai = num_ai
@@ -64,8 +62,6 @@ class Game:
     def run(self):
         """Starts and runs the main game loop."""
         print("\n--- Game Setup Complete ---")
-        # In Part 2, the solution is hidden from the players.
-        # print(f"DEBUG: The solution is {self.solution['character'].value}, {self.solution['weapon'].value}, {self.solution['room'].value}.")
         for player in self.players:
             if not isinstance(player, AIPlayer):
                 player.display_hand()

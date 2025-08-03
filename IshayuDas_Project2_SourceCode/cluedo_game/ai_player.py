@@ -1,5 +1,3 @@
-# cluedo_game/ai_player.py
-
 import random
 from .player import Player
 from . import constants
@@ -17,7 +15,7 @@ class ClueSheet:
         # A dictionary to track who holds which card: {card_enum: player_object}
         self.known_card_owners = {}
 
-        # Remove my own cards from the possibilities
+        # Remove own cards from the possibilities
         for card in self.my_cards:
             self.eliminate(card, self)
 
