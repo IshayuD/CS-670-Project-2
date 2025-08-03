@@ -6,17 +6,17 @@ Prerequisites
 
 Steps to Run
 
-1.  Navigate to the Source Code Directory:
-    Open a terminal and navigate to the root folder of the project.
-    Type: 
+1.  Clone the Repository:
+    git clone https://github.com/IshayuD/CS-670-Project-2/tree/main
+
+2.  Navigate to the Source Code Directory:
+    Open a terminal and navigate to the root folder of the project:
     cd path/to/Studentname_Project2_SourceCode/
 
 2.  Run the Game:
-    Execute the `main.py` script using Python.
-    Type: 
+    Execute the `main.py` script using Python:
     python main.py
     
-
 3.  Play the Game:
     Follow the on-screen prompts on the terminal. You will be asked to:
     - Choose the number of players.
