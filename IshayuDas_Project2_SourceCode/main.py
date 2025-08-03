@@ -1,12 +1,10 @@
-# main.py
-
 from cluedo_game.game import Game
 
 def main():
     """
     Initializes and runs the Cluedo game.
     """
-    print("--- 🎲 Welcome to Cluedo! 🕵️ ---")
+    print("--- Welcome to Cluedo! ---")
     
     while True:
         try:

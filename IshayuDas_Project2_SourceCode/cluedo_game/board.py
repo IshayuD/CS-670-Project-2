@@ -1,5 +1,3 @@
-# cluedo_game/board.py
-
 from . import constants
 import random
 

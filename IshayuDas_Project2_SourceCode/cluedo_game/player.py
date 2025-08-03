@@ -1,7 +1,5 @@
-# cluedo_game/player.py
-
 class Player:
-    """Represents a player in the game."""
+    """A player in the game."""
     def __init__(self, player_name, character_enum):
         self.name = player_name
         self.character = character_enum

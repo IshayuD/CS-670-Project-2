@@ -1,5 +1,3 @@
-# tests/test_cluedo.py
-
 import unittest
 from unittest.mock import patch, MagicMock
 from cluedo_game.game import Game

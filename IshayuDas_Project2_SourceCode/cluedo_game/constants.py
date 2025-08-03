@@ -1,5 +1,3 @@
-# cluedo_game/constants.py
-
 from enum import Enum
 
 class Character(Enum):
@@ -29,8 +27,7 @@ class Room(Enum):
     HALL = "Hall"
     STUDY = "Study"
 
-# Using an abstract graph where rooms are nodes. Hallways are abstracted away.
-# Movement between adjacent rooms costs '1 move'.
+# Using a graph where rooms are nodes.
 BOARD_CONNECTIONS = {
     Room.STUDY: [Room.HALL, Room.LIBRARY],
     Room.HALL: [Room.STUDY, Room.LOUNGE, Room.DINING_ROOM],
@@ -51,7 +48,6 @@ SECRET_PASSAGES = {
 }
 
 # Simplified starting positions for the text-based game.
-# In a physical game, these are on hallway squares.
 START_POSITIONS = {
     Character.MISS_SCARLETT: Room.HALL,
     Character.COLONEL_MUSTARD: Room.LOUNGE,

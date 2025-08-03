@@ -1,12 +1,10 @@
-# cluedo_game/game.py
-
 import random
 from . import constants
 from .board import Board
 from .player import Player
 
 class Game:
-    """Orchestrates the entire Cluedo game."""
+    """Initializes the entire Cluedo game."""
     def __init__(self, num_players):
         self.num_players = num_players
         self.players = []
@@ -55,7 +53,6 @@ class Game:
     def run(self):
         """Starts and runs the main game loop."""
         print("\n--- Game Setup Complete ---")
-        # For Part 1, we can show the solution for easier testing.
         print(f"DEBUG: The solution is {self.solution['character'].value}, {self.solution['weapon'].value}, {self.solution['room'].value}.")
         for player in self.players:
             player.display_hand()
@@ -63,8 +60,7 @@ class Game:
         game_over = False
         while not game_over:
             self.take_turn()
-            # For Part 1, the game loop runs indefinitely until stopped manually.
-            # A full implementation would check for a correct accusation to set game_over = True.
+            # The game loop runs indefinitely until stopped manually.
 
     def take_turn(self):
         """Manages a single player's turn."""
@@ -102,7 +98,7 @@ class Game:
                 return
 
         if not use_secret_passage:
-            # Simplified movement: any roll lets you move to an adjacent room.
+            # Any roll lets you move to an adjacent room.
             print("You can move to the following rooms:")
             for i, move in enumerate(possible_moves):
                 print(f"  {i+1}: {move.value}")
@@ -162,6 +158,5 @@ class Game:
         self.board.move_token(suggested_char, room)
         self.board.move_token(suggested_weapon, room)
 
-        # Refutation logic would follow here, where other players check their hands.
-        # For Part 1, making the suggestion and moving the tokens is sufficient.
+        # Refutation logic - where other players check their hands.
         print("-----------------------")
