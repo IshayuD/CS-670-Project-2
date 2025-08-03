@@ -13,11 +13,11 @@ Steps to Run
     Open a terminal and navigate to the root folder of the project:
     cd path/to/Studentname_Project2_SourceCode/
 
-2.  Run the Game:
+3.  Run the Game:
     Execute the `main.py` script using Python:
     python main.py
     
-3.  Play the Game:
+4.  Play the Game:
     Follow the on-screen prompts on the terminal. You will be asked to:
     - Choose the number of players.
     - Press Enter to roll the dice on your turn.
